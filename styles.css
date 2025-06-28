@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Segoe UI', sans-serif;
   color: #222;
@@ -12,51 +13,158 @@ body {
   text-align: center;
 }
 
-/* Top logo bar */
-.topbar {
+/* Banner Header */
+.banner-header {
   width: 100%;
-  padding: 1rem;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem; /* 👈 Adds space below the banner */
+}
+
+
+.banner-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px;
+  display: block;
+  margin: 1rem 0 1rem 2rem; /* top, right, bottom, left */
+  padding: 0;
+}
+
+.pianist-intro {
+  max-width: 800px;
+  margin: 4rem auto 2rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.pianist-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 3px solid #ccc;
+}
+
+.pianist-intro p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 1rem;
+}
+
+.pianist-services {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.pianist-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pianist-services li {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+}
+
+.contact-cta {
+  margin: 2rem 0 4rem;
+  text-align: center;
+}
+
+
+
+
+/* Hero section - two column layout */
+.two-columns {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.logo-container {
-  padding-left: 1rem;
-}
-.logo {
-  height: 120px;
-  width: auto;
-}
-
-}
-
-/* Hero section */
-.hero {
+  justify-content: space-between;
+  gap: 3rem;
   padding: 4rem 2rem;
   background-color: #fff;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-.hero p {
-  font-size: 1.25rem;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: nowrap;
 }
 
-/* Section styles */
-section {
-  padding: 4rem 2rem;
+.hero-column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left;
 }
-.about, .services, .contact {
-  max-width: 700px;
-  margin: auto;
+
+.hero-column h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
 }
+
+.hero-column p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #000;
+}
+
+.nav-left {
+  text-align: left;
+  margin: 1rem 2rem;
+}
+
+
+/* About, Services, Quote sections */
+.about, .services, .quote {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
 .services ul {
   list-style: none;
-  padding-top: 1rem;
+  padding: 0;
+  margin-top: 1rem;
 }
+
 .services li {
+  font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+
+/* Quote block */
+.quote blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #555;
+  padding: 1rem;
+  border-left: 4px solid #ccc;
 }
 
 /* Footer */
@@ -65,7 +173,20 @@ footer {
   color: #eee;
   padding: 1rem;
 }
+
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-column {
+    text-align: center;
+  }
 }
